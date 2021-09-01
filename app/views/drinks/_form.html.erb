@@ -1,13 +1,34 @@
+<div class="form">
+
 <%= form_for @drink do |f| %>
-    <%= f.label "Drink Name" %>
+    <%= f.label "Drink Name" %><br>
     <%= f.text_field :drink_name %>
-    <br>
+    <br><br>
+    
+    <%= f.label "Select Category" %><br>
+    <%= f.select :category, ["Ordinary Drink", "Cocktail", "Milk / Float / Shake", "Cocoa", "Shot", "Coffee / Tea", "Homemade Liqueur", "Punch / Party Drink", "Beer", "Soft Drink / Soda"], prompt: "Please select" %>
+    <br><br>
+
+    <%= f.label "Alcoholic?" %><br>
+    <%= f.select :alcoholic, ["Alcoholic", "Non Alcoholic"], prompt: "Please select" %>
+    <br><br>
+
+    <%= f.label "Submit a image url" %><br>
+    <%= f.text_field :drink_thumb %>
+    <br><br>
+
+    <%= f.label "Recipe" %><br>
+    <%= f.text_field :drink_recipe %>
+    <br><br>
+    
     <%= f.label "Select an ingredient and measurement" %><br>
     <%= f.fields_for :measurements do |m| %>
         <%= m.collection_select :ingredient_id, Ingredient.all, :id, :name, prompt: "Please select" %>
         <%= m.label "measurement" %>
-        <%= m.text_field :measure %>
-    <%end%>    
+        <%= m.text_field :measure %><br>
+    <%end%>  
     <br><br>
     <%= f.submit %>
 <%end%>   
+
+</div>

@@ -1,17 +1,9 @@
+<div class="container">
+
 <h3>Create a New Drink<h3>
 
 <%= render partial: "application/errors", locals: {errors: @drink.errors.full_messages } %>
 
-<%= form_for @drink do |f| %>
-    <%= f.label "Drink Name" %>
-    <%= f.text_field :drink_name %>
-    <br>
-    <%= f.label "Select an ingredient and measurement" %><br>
-    <%= f.fields_for :measurements do |m| %>
-        <%= m.collection_select :ingredient_id, Ingredient.all, :id, :name, prompt: "Please select" %>
-        <%= m.label "measurement" %>
-        <%= m.text_field :measure %>
-    <%end%>    
-    <br><br>
-    <%= f.submit %>
-<%end%>    
+<%= render 'form' %>
+
+</div>

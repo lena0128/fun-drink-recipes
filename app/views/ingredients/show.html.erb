@@ -3,7 +3,7 @@
 <p id="flash"><%= flash[:message] %></p>
 
   <h3><%= @ingredient.name %></h3><br>
-
+  <div style="text-align: center;">
 <p><i>Last updated on: <%= @ingredient.updated_at.strftime("%B %d, %Y") %></i></p>
 
   <img src="<%= @ingredient.image %>" alt="ingredient image" width="30%">
@@ -13,7 +13,7 @@
   <br><br>
   
   <p><%= @ingredient.description %></p>
-  
+  </div>
   <br><br>
    
 

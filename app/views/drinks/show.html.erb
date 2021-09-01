@@ -1,9 +1,32 @@
+<div class="container" id="drink_page">
+
+<p id="flash"><%= flash[:message] %></p>
+
 <h3><%= @drink.drink_name %></h3>
-<p>drink id: <%= @drink.id %></p>
-<div>Ingredients:
-<% @drink.measurements.each do |m| %>
-<li><%= m.ingredient.name %> <%= m.measure %> ||id: <%= m.id %></li>
-<%end%>
-</div>
+<div style="text-align: center;">
+<small><i>Last updated on: <%= @drink.updated_at.strftime("%B %d, %Y") %></i></small>
+<img src="<%= @drink.drink_thumb %>" alt="drink image" width="40%">
 <br>
-<%= link_to "Edit Drink", edit_drink_path(@drink) %>
+
+<b>Category:</b>
+<p><%= @drink.category %></p>
+<br>
+
+<b>Alcoholic:</b>
+<p><%= @drink.alcoholic %></p>
+<br>
+
+<b>Main ingredients: </b>
+<% @drink.measurements.each do |m| %>
+<li><small><%= m.ingredient.name %> - <%= m.measure %></small></li>
+<%end%>
+<br>
+
+<b>Recipe Instruction:</b>
+<p><%= @drink.drink_recipe %></p>
+<br>
+<button type="button", class="btn btn-info btn-sm"><%= link_to "Edit Drink", edit_drink_path(@drink), class: 'btn btn-info btn-sm' %></button>
+<button type="button", class="btn btn-info btn-sm"><%= button_to "Delete Drink", @drink, method: :delete, data: { confirm: "Do you really want to delete this item?" }, class: 'btn btn-info btn-sm' %></button>
+<br><br>
+</div>
+</div>

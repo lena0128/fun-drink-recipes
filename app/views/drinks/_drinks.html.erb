@@ -1,0 +1,12 @@
+<div class="row">
+<% drinks.each do |d| %>
+  <div class="col-sm">
+    <div class="card" id="drink-gallery" style="width: 14rem;">
+      <img class="card-img-top" src="<%= d.drink_thumb %>" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-title"><%= link_to d.drink_name, drink_path(d) %></p>
+      </div><br>
+    </div>
+</div>
+<%end%>
+</div>

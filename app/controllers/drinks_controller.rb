@@ -9,10 +9,10 @@ class DrinksController < ApplicationController
         @drink = Drink.new
         @drink.measurements.build
         @drink.measurements.build
+        @drink.measurements.build
     end
 
     def create
-        binding.pry
         @drink = Drink.new(drink_params)
         if @drink.save
             flash[:message] = "New drink successfully created!"
@@ -41,6 +41,10 @@ class DrinksController < ApplicationController
     def drink_params
         params.require(:drink).permit(
             :drink_name,
+            :category,
+            :alcoholic,
+            :drink_thumb,
+            :drink_recipe,
             measurements_attributes: [:measure, :ingredient_id, :id]
         )
     end
