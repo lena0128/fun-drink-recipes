@@ -13,3 +13,75 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+    box-sizing: border-box;
+  }
+.navbar-nav {
+  font-size: 0.8rem;
+}
+
+.font-size {
+  font-size: 0.8rem;
+}
+  .container p {
+    font-family: "PlayFair Dispaly";
+    font-size: 0.9rem;
+  }
+  .container h3 {
+    padding: 1rem;
+    font-weight: bold;
+    text-align: center; 
+    color:#f75d5d;
+  }
+
+  .container h5 {
+    padding: 1rem;
+    text-align: center; 
+    color:#59AFBA;
+  }
+
+  .container img {
+    margin: auto;
+    display: block;
+  }
+
+  .form {
+    text-align: left;  
+    display: block;
+    padding: 1.5rem;
+    width: 100%; 
+    border: 4px;
+    background-color:#59AFBA;
+    color: white;
+    font-size: 0.8rem;
+  }
+
+  .fields_with_errors {
+    padding-left: 3rem;
+    padding-top: 3rem;
+    text-align: left;
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+  }
+  .field_with_errors input {
+    border-color: red;
+  }
+
+  #drink-gallery{
+    background-color:#eceaea;
+    font-size: 14px;
+    text-align: center;
+    margin: 0.6rem;
+  }
+
+#flash {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: red;
+  font-style: italic;
+  text-align: left;
+  padding: 5px;
+
+}

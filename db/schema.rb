@@ -14,11 +14,19 @@ ActiveRecord::Schema.define(version: 2021_09_01_184808) do
 
   create_table "drinks", force: :cascade do |t|
     t.string "drink_name"
+    t.string "category"
+    t.string "alcoholic"
+    t.string "drink_thumb"
+    t.string "drink_recipe"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "ingredients", force: :cascade do |t|
+    t.string "name"
+    t.string "image"
+    t.string "description"
+    t.string "alcohol"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

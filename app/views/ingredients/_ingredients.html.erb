@@ -1,0 +1,12 @@
+<div class="row">
+<% ingredients.each do |i| %>
+  <div class="col-sm">
+    <div class="card" id="drink-gallery" style="width: 14rem; padding-top: 1rem;">
+      <img class="card-img-top" src="<%= i.image %>" alt="<%= i.name %> thumbnail">
+      <div class="card-body">
+        <p class="card-title"><%= link_to i.name, ingredient_path(i) %></p>
+      </div><br>
+    </div>
+</div>
+<%end%>
+</div>

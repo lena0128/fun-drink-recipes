@@ -1,0 +1,20 @@
+<div class="container">
+
+<p id="flash"><%= flash[:message] %></p>
+
+  <h3><%= @ingredient.name %></h3><br>
+
+<p><i>Last updated on: <%= @ingredient.updated_at.strftime("%B %d, %Y") %></i></p>
+
+  <img src="<%= @ingredient.image %>" alt="ingredient image" width="30%">
+  
+  <h5>Alcohol: <%= @ingredient.alcohol %></h5>
+  
+  <br><br>
+  
+  <p><%= @ingredient.description %></p>
+  
+  <br><br>
+   
+
+</div>

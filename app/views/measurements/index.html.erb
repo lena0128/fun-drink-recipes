@@ -1,0 +1,4 @@
+<% @measurements.each do |m| %>
+    <li><%= m.ingredient.name %> <%= m.measure %> - belongs to <%= m.drink.drink_name %></li>
+
+<%end%>    

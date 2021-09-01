@@ -7,11 +7,15 @@ class DrinksController < ApplicationController
 
     def new
         @drink = Drink.new
+        @drink.measurements.build
+        @drink.measurements.build
     end
 
     def create
+        binding.pry
         @drink = Drink.new(drink_params)
         if @drink.save
+            flash[:message] = "New drink successfully created!"
             redirect_to drink_path(@drink)
         else
             render :new
@@ -25,12 +29,19 @@ class DrinksController < ApplicationController
     end
 
     def update
+      if @drink.update(drink_params)
+        flash[:message] = "Drink successfully updated!"
+        redirect_to drink_path(@drink)
+      else
+        render :edit
+      end
     end
 
     private
     def drink_params
         params.require(:drink).permit(
-            :drink_name
+            :drink_name,
+            measurements_attributes: [:measure, :ingredient_id, :id]
         )
     end
 

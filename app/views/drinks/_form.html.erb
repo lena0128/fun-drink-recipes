@@ -1,7 +1,3 @@
-<h3>Create a New Drink<h3>
-
-<%= render partial: "application/errors", locals: {errors: @drink.errors.full_messages } %>
-
 <%= form_for @drink do |f| %>
     <%= f.label "Drink Name" %>
     <%= f.text_field :drink_name %>
@@ -14,4 +10,4 @@
     <%end%>    
     <br><br>
     <%= f.submit %>
-<%end%>    
+<%end%>   
