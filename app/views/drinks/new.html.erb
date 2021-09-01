@@ -1,0 +1,8 @@
+<h3>Create a New Drink<h3>
+
+<%= form_for @drink do |f| %>
+    <%= f.label "Drink Name" %>
+    <%= f.text_field :drink_name %>
+    <br>
+    <%= f.submit %>
+<%end%>    
