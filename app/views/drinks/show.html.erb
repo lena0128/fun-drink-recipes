@@ -9,18 +9,18 @@
 <br>
 
 <b>Category:</b>
-<p><%= @drink.category %></p>
-<br>
+<%= @drink.category %>
+<br><br>
 
 <b>Alcoholic:</b>
-<p><%= @drink.alcoholic %></p>
-<br>
+<%= @drink.alcoholic %>
+<br><br>
 
-<b>Main ingredients: </b>
+<b>Main ingredients: </b><br>
 <% @drink.measurements.each do |m| %>
-<li><small><%= m.ingredient.name %> - <%= m.measure %></small></li>
+<small><%= link_to m.ingredient.name, ingredient_path(m.ingredient_id) %> - <%= m.measure %></small> ||
 <%end%>
-<br>
+<br><br>
 
 <b>Recipe Instruction:</b>
 <p><%= @drink.drink_recipe %></p>

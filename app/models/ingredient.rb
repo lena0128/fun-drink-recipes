@@ -4,7 +4,7 @@ class Ingredient < ApplicationRecord
 
     before_validation :make_title_case, :set_defalut_image
     validates :name, presence: true, uniqueness: true
-    validates_presence_of :alcohol
+    #validates_presence_of :alcohol
     validate :is_title_case
 
 

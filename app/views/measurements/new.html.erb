@@ -8,9 +8,6 @@
     <br>
     <%= f.label "Select an Drink" %>
     <%= f.collection_select :drink_id, Drink.all, :id, :drink_name, prompt: "Please select" %>
-    <br>
-    <%= f.label "Select an Ingredient" %>
-    <%= f.collection_select :ingredient_id, Ingredient.all, :id, :name, prompt: "Please select" %>
-    <br><br>
+    <br> 
     <%= f.submit %>
 <%end%>    

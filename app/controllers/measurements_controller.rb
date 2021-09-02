@@ -13,13 +13,16 @@ class MeasurementsController < ApplicationController
     end
 
     def create
+        binding.pry
         @measurement = Measurement.new(measurement_params)
-        if @measurement.save
+        
+        @measurement.save
+        binding.pry
             flash[:message] = "New measurement successfully created!"
             redirect_to measurement_path(@measurement)
-        else
-            render :new
-        end
+        #else
+         #   render :new
+        #end
     end
 
     private
@@ -27,7 +30,8 @@ class MeasurementsController < ApplicationController
         params.require(:measurement).permit(
             :measure,
             :drink_id,
-            :ingredient_id
+            :ingredient_id, 
+            ingredient_attributes: [:name]
         )
     end
 
