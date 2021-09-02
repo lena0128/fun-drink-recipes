@@ -16,10 +16,11 @@
 <%= @drink.alcoholic %>
 <br><br>
 
-<b>Main ingredients: </b><br>
-<% @drink.measurements.each do |m| %>
-<small><%= link_to m.ingredient.name, ingredient_path(m.ingredient_id) %> - <%= m.measure %></small> ||
-<%end%>
+<b>Main ingredients & Measurements: </b><br>
+<p><% @drink.measurements.each do |m| %>
+<%= link_to m.ingredient.name, ingredient_path(m.ingredient_id) %> - <%= m.measure %> ||
+<%end%></p>
+<%= link_to "Add Ingredient Measurement", new_drink_measurement_path(@drink), class: 'btn btn-info btn-sm' %>
 <br><br>
 
 <b>Recipe Instruction:</b>

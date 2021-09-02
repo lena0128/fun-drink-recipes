@@ -5,7 +5,16 @@ class MeasurementsController < ApplicationController
     end
 
     def new
-        @measurement = Measurement.new
+        # by checking if there is an drink_id in the params hash, we can know which drink we are associated with
+        if params[:drink_id]
+            @drink = Drink.find_by(id: params[:drink_id])
+            # by calling #build method, the new drink object will authomatically have an associated drink_id 
+            @measurement = @drink.measurements.build
+            @drinks = Drink.all
+        else
+            @drinks = Drink.all
+            @measurement = Measurement.new
+        end
     end
 
     def show
@@ -13,16 +22,17 @@ class MeasurementsController < ApplicationController
     end
 
     def create
-        binding.pry
         @measurement = Measurement.new(measurement_params)
-        
-        @measurement.save
-        binding.pry
+        if params[:drink_id]
+            @measurement.drink_id = params[:drink_id]
+        end
+            if @measurement.save
             flash[:message] = "New measurement successfully created!"
-            redirect_to measurement_path(@measurement)
-        #else
-         #   render :new
-        #end
+            redirect_to drink_path(@measurement.drink_id)
+        else
+            @drinks = Drink.all
+            render :new
+        end
     end
 
     private

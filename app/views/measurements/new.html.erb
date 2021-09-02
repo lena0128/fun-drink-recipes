@@ -1,13 +1,23 @@
+<div class="container">
+
 <h3>Create a New Measurement</h3>
 
 <%= render partial: "application/errors", locals: {errors: @measurement.errors.full_messages } %>
 
-<%= form_for @measurement do |f| %>
+<div class="form">
+<%= form_for @measurement, url: form_url_helper(@drink) do |f| %>
+    <% if !@drink %>
+      <%= f.label "Select an drink" %>
+      <%= f.collection_select :drink_id, Drink.all, :id, :drink_name, prompt: "Please select" %>
+    <%end%>
+    <%= f.label "Select an ingredient" %>
+    <%= f.collection_select :ingredient_id, Ingredient.all, :id, :name, prompt: "Please select" %>
     <%= f.label :measurement %>
     <%= f.text_field :measure %>
-    <br>
-    <%= f.label "Select an Drink" %>
-    <%= f.collection_select :drink_id, Drink.all, :id, :drink_name, prompt: "Please select" %>
-    <br> 
-    <%= f.submit %>
+    <br><br>
+    <%= f.submit "Add Measurement" %>
 <%end%>    
+
+</div>
+
+</div>

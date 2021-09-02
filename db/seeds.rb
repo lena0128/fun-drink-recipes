@@ -85,18 +85,213 @@ Ingredient.create([
     image: "https://www.thecocktaildb.com/images/ingredients/Lime.png",
     description: "A lime is a hybrid citrus fruit, which is typically round, lime green, 3–6 centimetres (1.2–2.4 in) in diameter, and contains acidic juice vesicles. ",
     alcohol: "no"
+},
+
+{
+    name: "Agave Syrup",
+    image: "https://www.thecocktaildb.com/images/ingredients/Agave%20Syrup.png",
+    description: "Agave nectar (more accurately called agave syrup) is a sweetener commercially produced from several species of agave, including Agave tequilana (blue agave) and Agave salmiana. Agave syrup is sweeter than honey and tends to be less viscous. Most agave syrup comes from Mexico and South Africa. ",
+    alcohol: "no"
+},
+
+{
+    name: "Ice",
+    image: "https://www.thecocktaildb.com/images/ingredients/Ice.png",
+    description: "N/A ",
+    alcohol: "no"
+},
+
+{
+    name: "Cream of Coconut",
+    image: "https://www.thecocktaildb.com/images/ingredients/Cream%20of%20Coconut.png",
+    description: "Cream of Coconut is made with 100% cane sugar and contains real coconut meat (not just coconut milk). ",
+    alcohol: "no"
+},
+
+{
+    name: "Strawberry Schnapps",
+    image: "https://www.thecocktaildb.com/images/ingredients/Strawberry%20Schnapps.png",
+    description: "Schnapps or schnaps is a type of alcoholic beverage that may take several forms, including distilled fruit brandies, herbal liqueurs, infusions, and flavored liqueurs made by adding fruit syrups, spices, or artificial flavorings to neutral grain spirits. ",
+    alcohol: "yes"
+},
+
+{
+    name: "Strawberries",
+    image: "https://www.thecocktaildb.com/images/ingredients/Strawberries.png",
+    description: "The garden strawberry (or simply strawberry; Fragaria × ananassa) is a widely grown hybrid species of the genus Fragaria, collectively known as the strawberries. It is cultivated worldwide for its fruit. The fruit is widely appreciated for its characteristic aroma, bright red color, juicy texture, and sweetness. It is consumed in large quantities, either fresh or in such prepared foods as preserves, juice, pies, ice creams, milkshakes, and chocolates. ",
+    alcohol: "no"
+},
+
+{
+    name: "Watermelon",
+    image: "https://www.thecocktaildb.com/images/ingredients/Watermelon.png",
+    description: "Watermelon (Citrullus lanatus) is a plant species in the family Cucurbitaceae, a vine-like flowering plant originally domesticated in West Africa. It is a highly cultivated fruit worldwide, having more than 1,000 varieties. Watermelon is a scrambling and trailing vine in the flowering plant family Cucurbitaceae. There is evidence from seeds in Pharaoh tombs of watermelon cultivation in Ancient Egypt. Watermelon is grown in favorable climates from tropical to temperate regions worldwide for its large edible fruit, which is a berry with a hard rind and no internal divisions, and is botanically called a pepo. The sweet, juicy flesh is usually deep red to pink, with many black seeds, although seedless varieties exist. The fruit can be eaten raw or pickled, and the rind is edible after cooking. It is commonly consumed as a juice or as an ingredient in mixed beverages.",
+    alcohol: "no"
+},
+
+{
+    name: "Mint",
+    image: "https://www.thecocktaildb.com/images/ingredients/Mint.png",
+    description: "Lamiaceae or Labiatae is a family of flowering plants commonly known as the mint or deadnettle family. Many of the plants are aromatic in all parts and include widely used culinary herbs, such as basil, mint, rosemary, sage, savory, marjoram, oregano, hyssop, thyme, lavender, and perilla. Some species are shrubs, trees (such as teak), or, rarely, vines. Many members of the family are widely cultivated, not only for their aromatic qualities but also their ease of cultivation, since they are readily propagated by stem cuttings. ",
+    alcohol: "no"
+},
+
+{
+    name: "Grapefruit Juice",
+    image: "https://www.thecocktaildb.com/images/ingredients/Grapefruit%20Juice.png",
+    description: "Grapefruit juice is the juice from grapefruits. It is rich in vitamin C and ranges from sweet-tart to very sour. Variations include white grapefruit, pink grapefruit and ruby red grapefruit juice. ",
+    alcohol: "no"
+},
+
+{
+    name: "Goldschlager",
+    image: "https://www.thecocktaildb.com/images/ingredients/Goldschlager.png",
+    description: "Goldschläger is a Swiss cinnamon schnapps (43.5% alcohol by volume or 87 proof; originally it was 53.5% alcohol or 107 proof),[1] a liqueur with very thin, yet visible flakes of gold floating in it. ",
+    alcohol: "yes"
+},
+
+{
+    name: "Butterscotch Schnapps",
+    image: "https://www.thecocktaildb.com/images/ingredients/Butterscotch%20Schnapps.png",
+    description: "Schnapps or schnaps is a type of alcoholic beverage that may take several forms, including distilled fruit brandies, herbal liqueurs, infusions, and flavored liqueurs made by adding fruit syrups, spices, or artificial flavorings to neutral grain spirits. ",
+    alcohol: "yes"
+},
+
+{
+    name: "Powdered Sugar",
+    image: "https://www.thecocktaildb.com/images/ingredients/Powdered%20Sugar.png",
+    description: "Powdered sugar, also called confectioners' sugar, 10X sugar or icing sugar, is a finely ground sugar produced by milling granulated sugar into a powdered state. ",
+    alcohol: "no"
+},
+
+{
+    name: "Nutmeg",
+    image: "https://www.thecocktaildb.com/images/ingredients/Nutmeg.png",
+    description: "Nutmeg is the seed or ground spice of several species of the genus Myristica. Myristica fragrans is a dark-leaved evergreen tree cultivated for two spices derived from its fruit: nutmeg, from its seed, and mace, from the seed covering. It is also a commercial source of an essential oil and nutmeg butter. ",
+    alcohol: "no"
+},
+
+{
+    name: "Chocolate Liqueur",
+    image: "https://www.thecocktaildb.com/images/ingredients/Chocolate%20Liqueur.png",
+    description: "N/A ",
+    alcohol: "yes"
+},
+
+{
+    name: "Amaretto",
+    image: "https://www.thecocktaildb.com/images/ingredients/Amaretto.png",
+    description: "Amaretto is a sweet, almond-flavoured, Italian liqueur associated with Saronno, Italy. Various commercial brands are made from a base of apricot pits, almonds, or both. When served as a beverage, amaretto can be drunk by itself, used as an ingredient to create several popular mixed drinks, or added to coffee. Amaretto is also commonly used in culinary applications. ",
+    alcohol: "yes"
+},
+
+{
+    name: "Orange Juice",
+    image: "https://www.thecocktaildb.com/images/ingredients/Orange%20Juice.png",
+    description: "N/A ",
+    alcohol: "no"
+},
+
+{
+    name: "Banana",
+    image: "https://www.thecocktaildb.com/images/ingredients/Banana.png",
+    description: "N/A ",
+    alcohol: "no"
+},
+
+{
+    name: "Vanilla Ice-Cream",
+    image: "https://www.thecocktaildb.com/images/ingredients/Vanilla%20Ice-Cream.png",
+    description: "N/A ",
+    alcohol: "no"
+},
+
+{
+    name: "Godiva Liqueur",
+    image: "https://www.thecocktaildb.com/images/ingredients/Godiva%20Liqueur.png",
+    description: "N/A ",
+    alcohol: "yes"
+},
+
+{
+    name: "Caramel Sauce",
+    image: "https://www.thecocktaildb.com/images/ingredients/Caramel%20Sauce.png",
+    description: "Caramel is a medium to dark-brown confectionery product made by heating a variety of sugars. It can be used as a flavoring in puddings and desserts, as a filling in bonbons, or as a topping for ice cream and custard. ",
+    alcohol: "no"
 }
 
 ])
 
-rm_1 = RestClient.get "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Rum"
+rm_1 = RestClient.get "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
 rm_1_array = JSON.parse(rm_1)["drinks"]
 
 rm_1_array.each do |drink|
     Drink.create(
     drink_name: drink["strDrink"],
+    category: drink["strCategory"],
+    alcoholic: drink["strAlcoholic"],
     drink_thumb: drink["strDrinkThumb"],
-    drink_recipe: "This is a recipe.",
+    drink_recipe: drink["strInstructions"]
     )
 end
+
+rm_2 = RestClient.get "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=milk"
+rm_2_array = JSON.parse(rm_2)["drinks"]
+
+rm_2_array.each do |drink|
+    Drink.create(
+    drink_name: drink["strDrink"],
+    category: drink["strCategory"],
+    alcoholic: drink["strAlcoholic"],
+    drink_thumb: drink["strDrinkThumb"],
+    drink_recipe: drink["strInstructions"]
+    )
+end
+
+Measurement.create([
+    {measure: "1 1/2 oz ", drink_id: 1, ingredient_id: 4},
+    {measure: "1/2 oz ", drink_id: 1, ingredient_id: 8},
+    {measure: "1 oz ", drink_id: 1, ingredient_id: 9},
+    {measure: "null ", drink_id: 1, ingredient_id: 10},
+    {measure: "1 1/2 oz ", drink_id: 2, ingredient_id: 4},
+    {measure: "1 oz ", drink_id: 2, ingredient_id: 11},
+    {measure: "1 oz ", drink_id: 2, ingredient_id: 9},
+    {measure: "Coarse ", drink_id: 2, ingredient_id: 10},
+    {measure: "4.5 cl ", drink_id: 3, ingredient_id: 4},
+    {measure: "1.5 cl ", drink_id: 3, ingredient_id: 9},
+    {measure: "2 spoons ", drink_id: 3, ingredient_id: 13},
+    {measure: "1/4 cup ", drink_id: 4, ingredient_id: 4},
+    {measure: "3 tblsp fresh ", drink_id: 4, ingredient_id: 9},
+    {measure: "1 cup ", drink_id: 4, ingredient_id: 14},
+    {measure: "1/4 cup ", drink_id: 4, ingredient_id: 15},
+    {measure: "1/2 oz ", drink_id: 5, ingredient_id: 16},
+    {measure: "1 oz ", drink_id: 5, ingredient_id: 4},
+    {measure: "1/2 oz ", drink_id: 5, ingredient_id: 8},
+    {measure: "1 oz ", drink_id: 5, ingredient_id: 9},
+    {measure: "1 oz ", drink_id: 5, ingredient_id: 17},
+    {measure: "null ", drink_id: 5, ingredient_id: 10},
+    {measure: "1/2 cup ", drink_id: 6, ingredient_id: 18},
+    {measure: "5 ", drink_id: 6, ingredient_id: 19},
+    {measure: "Juice of 1/2 ", drink_id: 6, ingredient_id: 20},
+    {measure: "1 shot ", drink_id: 6, ingredient_id: 12},
+    {measure: "Garnish with ", drink_id: 6, ingredient_id: 4},
+    {measure: "1 oz ", drink_id: 7, ingredient_id: 21},
+    {measure: "1 oz ", drink_id: 7, ingredient_id: 22},
+    {measure: "1 oz ", drink_id: 7, ingredient_id: 6},
+    {measure: "2 oz ", drink_id: 8, ingredient_id: 1},
+    {measure: "1 cup ", drink_id: 8, ingredient_id: 6},
+    {measure: "1 tsp ", drink_id: 8, ingredient_id: 23},
+    {measure: "null ", drink_id: 8, ingredient_id: 24},
+    {measure: "1/2 shot ", drink_id: 9, ingredient_id: 25},
+    {measure: "1/2 shot ", drink_id: 9, ingredient_id: 6},
+    {measure: "1 dash ", drink_id: 9, ingredient_id: 26},
+    {measure: "10 cl cold ", drink_id: 10, ingredient_id: 6},
+    {measure: "4 cl ", drink_id: 10, ingredient_id: 27},
+    {measure: "2 tsp ", drink_id: 10, ingredient_id: 13},
+    {measure: "1/2 ", drink_id: 10, ingredient_id: 28},
+    {measure: "3 cups ", drink_id: 11, ingredient_id: 29},
+    {measure: "1 cup ", drink_id: 11, ingredient_id: 6},
+    {measure: "1/2 cup ", drink_id: 11, ingredient_id: 30},
+    {measure: "4 tablespoons ", drink_id: 11, ingredient_id: 31}
+])
 
