@@ -2,7 +2,22 @@ class IngredientsController < ApplicationController
     before_action :set_ingredient, only: [:show]
 
     def index
-        @ingredients = Ingredient.all
+        # name seach function
+        if params[:name]
+            @ingredients = Ingredient.ingredient_search(params[:name])
+        # filter by alcohol     
+        elsif params[:filter]
+            case params[:filter]
+              when "Alcohol"
+              @ingredients = Ingredient.filter_alcohol
+              when "Non-Alcohol"
+              @ingredients = Ingredient.filter_non_alcohol
+              when "All"
+                @ingredients = Ingredient.all
+              end
+        else
+           @ingredients = Ingredient.all  
+        end
     end
 
     def new

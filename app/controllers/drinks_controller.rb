@@ -2,7 +2,36 @@ class DrinksController < ApplicationController
     before_action :set_drink, only: [:show, :edit, :update]
 
     def index
-        @drinks = Drink.all
+        if params[:name]
+            @drinks = Drink.drink_search(params[:name])
+        elsif params[:filter]
+            case params[:filter]
+            when "Ordinary Drink"
+                @drinks = Drink.filter_ordinary_drink
+            when "Cocktail"
+                @drinks = Drink.filter_cocktail 
+            when "Milk / Float / Shake"
+                @drinks = Drink.filter_milk_float_shake 
+            when "Cocoa" 
+                @drinks = Drink.filter_cocoa
+            when "Shot"
+                @drinks = Drink.filter_shot
+            when "Coffee / Tea" 
+                @drinks = Drink.filter_coffee_tea
+            when "Homemade Liqueur" 
+                @drinks = Drink.filter_homemade_liqueur
+            when"Punch / Party Drink" 
+                @drinks = Drink.filter_punch_party_drink
+            when "Beer" 
+                @drinks = Drink.filter_beer
+            when "Soft Drink / Soda"
+                @drinks = Drink.filter_soda
+            when "View All"
+                @drinks = Drink.all
+        end    
+        else
+           @drinks = Drink.all
+        end
     end
 
     def new

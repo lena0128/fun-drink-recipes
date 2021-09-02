@@ -7,6 +7,10 @@ class Ingredient < ApplicationRecord
     #validates_presence_of :alcohol
     validate :is_title_case
 
+    scope :ingredient_search, ->(name) { where("name LIKE ?", "%#{name.titlecase}%") }
+    scope :filter_alcohol, -> { where(alcohol: "yes") }
+    scope :filter_non_alcohol, -> { where(alcohol: "no") }
+
 
     def set_defalut_image
         if self.image == nil || self.image == ""

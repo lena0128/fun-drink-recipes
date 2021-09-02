@@ -295,3 +295,4 @@ Measurement.create([
     {measure: "4 tablespoons ", drink_id: 11, ingredient_id: 31}
 ])
 
+User.create([{username: "Joyce13", email:"joyce13@email.com"}, password_digest: "password13"])

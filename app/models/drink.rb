@@ -6,6 +6,25 @@ class Drink < ApplicationRecord
     validates :drink_name, presence: true, uniqueness: true
     validates_presence_of :category, :alcoholic, :drink_recipe
 
+    # search by drink name
+    scope :drink_search, ->(name) { where( "drink_name LIKE ?", "%#{name.titlecase}%")}
+    
+    # filter by category
+    scope :filter_ordinary_drink, -> { where(category: "Ordinary Drink")}
+    scope :filter_cocktail, -> { where(category: "Cocktail")}
+    scope :filter_milk_float_shake, -> { where(category: "Milk / Float / Shake")}
+    scope :filter_cocoa, -> { where(category: "Cocoa")}
+    scope :filter_shot, -> { where(category: "Shot")}
+    scope :filter_coffee_tea, -> { where(category: "Coffee / Tea")}
+    scope :filter_homemade_liqueur, -> { where(category: "Homemade Liqueur")}
+    scope :filter_punch_party_drink, -> { where(category: "Punch / Party Drink")}
+    scope :filter_beer, -> { where(category: "Beer")}
+    scope :filter_soda, -> { where(category: "Soft Drink / Soda")}
+    
+    # latest data displayed on hoempage
+    scope :latest_alcohoic_drinks, -> { where(alcoholic: "Alcoholic").last(3)} 
+    scope :latest_non_alcohoic_drinks, -> { where(alcoholic: "Non Alcoholic").last(3)} 
+
     def measurements_attributes=(measurements_attributes)
         measurements_attributes.values.each do |hash|
             if hash[:id]
