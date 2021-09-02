@@ -1,5 +1,6 @@
 class IngredientsController < ApplicationController
     before_action :set_ingredient, only: [:show]
+    before_action :require_login
 
     def index
         # name seach function

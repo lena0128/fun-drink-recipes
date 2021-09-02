@@ -8,11 +8,16 @@ Rails.application.routes.draw do
     resources :measurements, only: [:new, :create, :index]
   end
 
-  get '/', to: "welcome#home"
+  
   get '/signup', to: "users#new", as: "signup"
   post '/signup', to: "users#create"
   get '/login', to: "sessions#new", as: "login"
-  post '/logout', to: "sessions#create"
+  post '/login', to: "sessions#create"
+  post '/logout', to: "sessions#destroy"
+
+  get '/auth/:provider/callback', to: 'sessions#omniauth'
+
+  get '/', to: "welcome#home"
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

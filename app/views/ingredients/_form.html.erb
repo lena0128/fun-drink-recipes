@@ -3,23 +3,23 @@
 <%= form_for @ingredient do |f| %>
 
    <%= f.label "Name:" %><br>
-   <%= f.text_field :name %>
+   <%= f.text_field :name, class: "form-control" %>
    <br><br>   
    
    <%= f.label "Submit an image url:" %><br>
-   <%= f.text_field :image %>
+   <%= f.text_field :image, class: "form-control" %>
    <br><br>
    
    <%= f.label "Description:" %><br>
-   <%= f.text_area :description, cols: 30, rows: 10 %>
+   <%= f.text_area :description, class: "form-control" %>
    <br><br>
    
    <%= f.label "Alcohol? " %>
    <%= f.select :alcohol, ["yes", "no"], prompt: "Please select" %>
    <br><br>
 
-   <%= f.submit %>
-   <br><br>
+   <%= f.submit "Create", class: 'btn btn-sm' %>
+   <br>
 
   <%end%> 
 

@@ -2,7 +2,7 @@
 
 <%= form_for @drink do |f| %>
     <%= f.label "Drink Name" %><br>
-    <%= f.text_field :drink_name %>
+    <%= f.text_field :drink_name, class: "form-control" %>
     <br><br>
     
     <%= f.label "Select Category" %><br>
@@ -14,11 +14,11 @@
     <br><br>
 
     <%= f.label "Submit a image url" %><br>
-    <%= f.text_field :drink_thumb %>
+    <%= f.text_field :drink_thumb, class: "form-control" %>
     <br><br>
 
     <%= f.label "Recipe" %><br>
-    <%= f.text_field :drink_recipe %>
+    <%= f.text_area :drink_recipe, class: "form-control" %>
     <br><br>
     
     <%= f.label "Select an ingredient and measurement" %><br>
@@ -28,7 +28,7 @@
         <%= m.text_field :measure %><br>
     <%end%>  
     <br><br>
-    <%= f.submit %>
+    <%= f.submit "Create Drink", class: "btn btn-sm" %>
 <%end%>   
 
 </div>

@@ -1,4 +1,24 @@
 <div class="container">
-  <h3>Sign Ups</h3>
-  
+  <h3>Sign Up</h3>
+
+  <%= render partial: "application/errors", locals: { errors: @user.errors.full_messages } %>
+
+  <div class="form">
+  <%= form_for @user do |f| %>
+    <%= f.label :username %><br>
+    <%= f.text_field :username, class: "form-control" %>
+    <br>
+    <%= f.label :email %><br>
+    <%= f.email_field :email, class: "form-control" %>
+    <br>
+    <%= f.label :password %><br>
+    <%= f.password_field :password, class: "form-control" %>
+    <br>
+    <%= f.label "Confirm Password" %><br>
+    <%= f.password_field :password_confirmation, class: "form-control" %>
+    <br><br>
+    <%= f.submit "Create", class: "btn btn-sm" %>
+  <%end%>  
+  </div>
+  <br>
 </div>

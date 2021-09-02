@@ -1,5 +1,6 @@
 class DrinksController < ApplicationController
     before_action :set_drink, only: [:show, :edit, :update]
+    before_action :require_login
 
     def index
         if params[:name]

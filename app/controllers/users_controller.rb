@@ -9,7 +9,7 @@ class UsersController < ApplicationController
         if @user.save
             # log user in
             session[:user_id] = @user.id
-            flash[:message] = "User successfully created!"
+            flash[:message] = "Your account has been successfully created!"
             redirect_to user_path(@user)
         else
             render :new
@@ -17,6 +17,7 @@ class UsersController < ApplicationController
     end
 
     def show
+        @user = User.find_by(id: params[:id])
     end
 
     private
