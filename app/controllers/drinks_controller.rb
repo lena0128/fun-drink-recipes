@@ -45,7 +45,7 @@ class DrinksController < ApplicationController
     def create
         @drink = Drink.new(drink_params)
         if @drink.save
-            flash[:message] = "New drink successfully created!"
+            flash[:message] = "A new drink has been successfully created!"
             redirect_to drink_path(@drink)
         else
             render :new
@@ -60,7 +60,7 @@ class DrinksController < ApplicationController
 
     def update
       if @drink.update(drink_params)
-        flash[:message] = "Drink successfully updated!"
+        flash[:message] = "The drink has been successfully updated!"
         redirect_to drink_path(@drink)
       else
         render :edit
