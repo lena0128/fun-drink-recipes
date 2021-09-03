@@ -14,6 +14,6 @@
   <%= link_to "Return to #{@ingredient.name}", ingredient_path(@ingredient), class: "btn btn-info btn-sm" %>
   <%else%>
   <button type="button", class="btn btn-info btn-sm"><%= button_to "Delete", @review, method: :delete, data: { confirm: "Do you really want to delete this item?" }, class: 'btn btn-info btn-sm' %></button>
-  <button type="button", class="btn btn-info btn-sm"><%= link_to "Return", user_path(current_user), class: "btn btn-info btn-sm" %></button>
+  <button type="button", class="btn btn-info btn-sm"><%= link_to "My Page", user_path(current_user), class: "btn btn-info btn-sm" %></button>
   <%end%>
 </div>

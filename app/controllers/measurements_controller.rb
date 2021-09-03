@@ -6,15 +6,17 @@ class MeasurementsController < ApplicationController
 
     def new
         # by checking if there is an drink_id in the params hash, we can know which drink we are associated with
-        if params[:drink_id]
+        # if params[:drink_id]
             @drink = Drink.find_by(id: params[:drink_id])
-            # by calling #build method, the new drink object will authomatically have an associated drink_id 
+            # by calling #build method, the new drink object will authomatically have an associated drink_id
+            @ingredients = Ingredient.all
             @measurement = @drink.measurements.build
             @drinks = Drink.all
-        else
-            @drinks = Drink.all
-            @measurement = Measurement.new
-        end
+        #else
+        #    @drinks = Drink.all
+        #    @ingredients = Ingredient.all
+        #    @measurement = Measurement.new
+        # end
     end
 
 

@@ -5,7 +5,7 @@
   <div class="form">
     <%= form_for(@review, url: form_url_helper(@ingredient)) do |f| %>
       <% if !@ingredient %> 
-        <%= f.label "Select an Ingredient" %>  
+        <%= f.label "Select an Ingredient to review" %>  
         <%= f.collection_select :ingredient_id, Ingredient.all, :id, :name, prompt: true %>
       <%end%>  <br>  
       <%= f.label :rating %>

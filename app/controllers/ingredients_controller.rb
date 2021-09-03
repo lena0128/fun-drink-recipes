@@ -10,14 +10,14 @@ class IngredientsController < ApplicationController
         elsif params[:filter]
             case params[:filter]
               when "Alcohol"
-              @ingredients = Ingredient.filter_alcohol
+              @ingredients = Ingredient.filter_alcohol.sort_by { |ingredient| ingredient.name }
               when "Non-Alcohol"
-              @ingredients = Ingredient.filter_non_alcohol
+              @ingredients = Ingredient.filter_non_alcohol.sort_by { |ingredient| ingredient.name }
               when "All"
-                @ingredients = Ingredient.all
+                @ingredients = Ingredient.all.sort_by { |ingredient| ingredient.name }
               end
         else
-           @ingredients = Ingredient.all  
+           @ingredients = Ingredient.all.sort_by { |ingredient| ingredient.name }
         end
     end
 

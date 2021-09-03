@@ -8,10 +8,10 @@
 <%= form_for(@measurement, url: drink_measurements_path(@drink)) do |f| %>
     <% if !@drink %>
       <%= f.label "Select an drink" %>
-      <%= f.collection_select :drink_id, Drink.all, :id, :drink_name, prompt: "Please select" %>
+      <%= f.collection_select :drink_id, Drink.all, :id, :drink_name, prompt: "Please select" %><br>
     <%end%>
     <%= f.label "Select an ingredient" %>
-    <%= f.collection_select :ingredient_id, Ingredient.all, :id, :name, prompt: "Please select" %>
+    <%= f.collection_select :ingredient_id, @ingredients, :id, :name, prompt: "Please select" %>
     <%= f.label :measurement %>
     <%= f.text_field :measure %>
     <br><br>

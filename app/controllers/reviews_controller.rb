@@ -30,7 +30,12 @@ class ReviewsController < ApplicationController
         end
         if @review.save
             flash[:message] = "Your review has been successfully created!"
-            redirect_to ingredient_review_path(@ingredient, @review)
+        end
+            if params[:ingredient_id]
+              @ingredient = Ingredient.find_by(id: params[:ingredient_id])
+              redirect_to ingredient_review_path(@ingredient, @review)
+            elsif
+                redirect_to review_path(@review)
         else
             render :new
         end
@@ -42,6 +47,7 @@ class ReviewsController < ApplicationController
           @user = current_user
           @review = @ingredient.reviews.find_by(id: params[:id])
         else
+            @user = current_user
             @review = Review.find_by(id: params[:id])
         end
     end

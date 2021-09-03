@@ -9,30 +9,30 @@ class DrinksController < ApplicationController
         elsif params[:filter]
             case params[:filter]
             when "Ordinary Drink"
-                @drinks = Drink.filter_ordinary_drink
+                @drinks = Drink.filter_ordinary_drink.sort_by { |drink| drink.drink_name }
             when "Cocktail"
-                @drinks = Drink.filter_cocktail 
+                @drinks = Drink.filter_cocktail.sort_by { |drink| drink.drink_name } 
             when "Milk / Float / Shake"
-                @drinks = Drink.filter_milk_float_shake 
+                @drinks = Drink.filter_milk_float_shake.sort_by { |drink| drink.drink_name } 
             when "Cocoa" 
-                @drinks = Drink.filter_cocoa
+                @drinks = Drink.filter_cocoa.sort_by { |drink| drink.drink_name }
             when "Shot"
-                @drinks = Drink.filter_shot
+                @drinks = Drink.filter_shot.sort_by { |drink| drink.drink_name }
             when "Coffee / Tea" 
-                @drinks = Drink.filter_coffee_tea
+                @drinks = Drink.filter_coffee_tea.sort_by { |drink| drink.drink_name }
             when "Homemade Liqueur" 
-                @drinks = Drink.filter_homemade_liqueur
+                @drinks = Drink.filter_homemade_liqueur.sort_by { |drink| drink.drink_name }
             when"Punch / Party Drink" 
-                @drinks = Drink.filter_punch_party_drink
+                @drinks = Drink.filter_punch_party_drink.sort_by { |drink| drink.drink_name }
             when "Beer" 
-                @drinks = Drink.filter_beer
+                @drinks = Drink.filter_beer.sort_by { |drink| drink.drink_name }
             when "Soft Drink / Soda"
-                @drinks = Drink.filter_soda
+                @drinks = Drink.filter_soda.sort_by { |drink| drink.drink_name }
             when "View All"
-                @drinks = Drink.all
+                @drinks = Drink.all.sort_by { |drink| drink.drink_name }
         end    
         else
-           @drinks = Drink.all
+           @drinks = Drink.all.sort_by { |drink| drink.drink_name }
         end
     end
 
