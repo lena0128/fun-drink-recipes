@@ -12,7 +12,7 @@ Rails.application.routes.draw do
     resources :measurements, only: [:new, :create, :index]
   end
 
-  resources :reviews, only: [:new, :create, :show]
+  resources :reviews, only: [:show, :destroy]
   
   get '/signup', to: "users#new", as: "signup"
   post '/signup', to: "users#create"

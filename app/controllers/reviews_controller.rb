@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
     before_action :require_login
+    before_action :set_review, only: [:destroy]
 
     def index
         if params[:ingredient_id]
@@ -36,8 +37,17 @@ class ReviewsController < ApplicationController
     end
 
     def show
-        @review = Review.find_by(id: params[:id])
-        @ingredient = @review.ingredient
+        if params[:ingredient_id]
+          @ingredient = Ingredient.find_by(id: params[:ingredient_id])
+        else
+            @review = Review.find_by(id: params[:id])
+        end
+    end
+
+    def destroy
+        @review.delete
+        @user = current_user
+        redirect_to user_path(@user)
     end
 
     private
@@ -48,6 +58,10 @@ class ReviewsController < ApplicationController
             :ingredient_id,
             :user_id
         )
+      end
+
+      def set_review
+        @review = Review.find_by(id: params[:id])
       end
 
 end

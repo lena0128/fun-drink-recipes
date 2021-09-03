@@ -26,6 +26,7 @@
     <b class="badge badge-pill badge-info">Review on</b> - <b><%= link_to r.ingredient.name, ingredient_path(r.ingredient) %></b><br>
     <%= r.rating %><br>
     <%= r.content if r.content %>
+    <p style="text-align: right"><b><%= link_to "full review", review_path(r) %></b></p>
    </li><br>
    <%end%> 
  </div>  
