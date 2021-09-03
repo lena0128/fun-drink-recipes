@@ -29,7 +29,7 @@ class ReviewsController < ApplicationController
         end
         if @review.save
             flash[:message] = "Your review has been successfully created!"
-            redirect_to ingredient_path(@ingredient)
+            redirect_to ingredient_review_path(@ingredient, @review)
         else
             render :new
         end
@@ -37,6 +37,7 @@ class ReviewsController < ApplicationController
 
     def show
         @review = Review.find_by(id: params[:id])
+        @ingredient = @review.ingredient
     end
 
     private

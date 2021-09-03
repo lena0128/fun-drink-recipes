@@ -4,16 +4,31 @@
 
   <p id="flash"><%= flash[:message] %></p>
 
-  <h3>Your Drinks</h3>
+  <% if @user.id == current_user.id %>
+
+  <h3>My Drinks</h3>
   <div>
    <% @user.drinks.each do |d| %>
-    <% if d.user_id == current_user.id %>
     <li class="list-group-item list-group-item-info">
-    <img src="<%= d.drink_thumb %>" class="rounded float-right" width="35px" style="float:right;">
-     <b class="badge badge-pill badge-info">Drink</b> - <%= link_to d.drink_name, drink_path(d) %>
+    <img src="<%= d.drink_thumb %>" class="rounded float-right" width="50px" style="float:right;">
+     <b><%= link_to d.drink_name, drink_path(d) %></b><br>
+     <small><%= d.alcoholic %></small>
     </li><br>
     <%end%> 
-   <%end%>
   </div>  
-  
+  <hr>
+
+  <h3>My Reviews</h3>
+  <div>
+  <% @user.reviews.each do |r| %>
+   <li class="list-group-item list-group-item-info">
+   <img src="<%= r.ingredient.image %>" class="rounded float-right" width="60px" style="float:right;">
+    <b class="badge badge-pill badge-info">Review on</b> - <b><%= link_to r.ingredient.name, ingredient_path(r.ingredient) %></b><br>
+    <%= r.rating %><br>
+    <%= r.content if r.content %>
+   </li><br>
+   <%end%> 
+ </div>  
+
+  <%end%>  
 </div>

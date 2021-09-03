@@ -1,8 +1,12 @@
 <div class="container">
 
 <% if @ingredient %>
+
 <h3>All Reviews on <%= @ingredient.name %></h3>
+
 <%= render partial: "reviews/reviews", locals: {reviews: @ingredient.reviews } %>
+
+<%= link_to "Return #{@ingredient.name}", ingredient_path(@ingredient), class: "btn btn-info btn-sm" %>
 
 <%else%>
 <h3>All Reviews</h3>

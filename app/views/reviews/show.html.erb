@@ -9,4 +9,5 @@
   <%= @review.content %>
   <br>
   <p><small>Reviewed on: <%= @review.updated_at.strftime("%B %d, %Y") %></small></p>
+  <%= link_to "Return #{@ingredient.name}", ingredient_path(@ingredient), class: "btn btn-info btn-sm" %>
 </div>

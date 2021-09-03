@@ -6,11 +6,11 @@
   <p><i>Last updated on: <%= @ingredient.updated_at.strftime("%B %d, %Y") %></i></p>
   <img src="<%= @ingredient.image %>" alt="ingredient image" width="20%">  
   <p><b>Alcohol: <%= @ingredient.alcohol %></b></p>
-  <p><%= @ingredient.description %></p>
-
+  <p><%= @ingredient.description %></p><br>
+  <hr>
   <h5>Related Drinks</h5>
-  <%= render partial: "drinks/drinks", locals: {drinks: @ingredient.drinks} %>
-
+  <%= render partial: "drinks/drinks", locals: {drinks: @ingredient.drinks} %><br>
+  <hr>
 
   <h5>Latest User Review</h5>
   <%= render partial: "reviews/reviews", locals: { reviews: @ingredient.reviews } %>
