@@ -1,0 +1,9 @@
+
+<% reviews.each do |r| %>
+  <small><b><%= r.user.username %></b></small> <%= r.rating %> 
+  <br>
+  <%= r.content %>
+  <br>
+  <p><small>Reviewed on: <%= r.updated_at.strftime("%B %d, %Y") %></small></p> 
+  <%end%> 
+  

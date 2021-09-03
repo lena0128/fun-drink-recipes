@@ -1,23 +1,23 @@
-<div class="container">
+<div class="container", style="text-align: center;">
 
 <p id="flash"><%= flash[:message] %></p>
 
-  <h3><%= @ingredient.name %></h3><br>
-  <div style="text-align: center;">
-<p><i>Last updated on: <%= @ingredient.updated_at.strftime("%B %d, %Y") %></i></p>
-
-  <img src="<%= @ingredient.image %>" alt="ingredient image" width="30%">
-  
-  <h5>Alcohol: <%= @ingredient.alcohol %></h5>
-  
-  <br><br>
-  
+  <h3><%= @ingredient.name %></h3>
+  <p><i>Last updated on: <%= @ingredient.updated_at.strftime("%B %d, %Y") %></i></p>
+  <img src="<%= @ingredient.image %>" alt="ingredient image" width="20%">  
+  <p><b>Alcohol: <%= @ingredient.alcohol %></b></p>
   <p><%= @ingredient.description %></p>
-  </div>
+
+  <h5>Related Drinks</h5>
+  <%= render partial: "drinks/drinks", locals: {drinks: @ingredient.drinks} %>
+
+
+  <h5>User Review</h5>
+  <%= render partial: "reviews/reviews", locals: { reviews: @ingredient.reviews } %>
+  <%= link_to "Add a Review", new_ingredient_review_path(@ingredient), class: "btn btn-info btn-lg" %>
   <br><br>
-   
-<%= render partial: "drinks/drinks", locals: {drinks: @ingredient.drinks} %>
+  </div>
 
-<%= link_to "Add a Review", new_ingredient_review_path(@ingredient) %>
 
-</div>
+
+

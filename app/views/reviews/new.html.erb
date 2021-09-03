@@ -3,9 +3,13 @@
 
 <%= render partial: "application/errors", locals: { errors: @review.errors.full_messages } %>
   <div class="form">
-    <%= form_for @review do |f| %>
+    <%= form_for(@review, url: form_url_helper(@ingredient)) do |f| %>
+      <% if !@ingredient %> 
+        <%= f.label "Select an Ingredient" %>  
+        <%= f.collection_select :ingredient_id, Ingredient.all, :id, :name, prompt: true %>
+      <%end%>  <br>  
       <%= f.label :rating %>
-      <%= f.select :rating, ["⭐⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐", "⭐⭐", "⭐"], prompt: "please select" %>
+      <%= f.select :rating, ["⭐⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐", "⭐⭐", "⭐"], prompt: true %>
       <br>
       <%= f.label "Review (optional)" %>
       <%= f.text_field :content, class:"form-control" %>
