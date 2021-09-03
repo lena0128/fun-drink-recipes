@@ -71,6 +71,7 @@ class DrinksController < ApplicationController
 
     def destroy
         @drink.delete
+        flash[:message] = "The drink has been deleted!"
         redirect_to drinks_path
     end
 
