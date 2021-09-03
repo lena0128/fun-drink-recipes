@@ -1,24 +1,23 @@
-# README
+# Fun Drink Recipes App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Fun Drink Recipe App is built with Ruby on Rails framework. This web application is for drink lovers to find and create ingredients and recipes from cocktails to milkshakes. Users can also comment and rating on any ingredient. The app also provides name search and filter funtionality. Enjoy!
 
-Things you may want to cover:
+The third-party provider registrations was created with Omniauth, CSS styling with Bootstrap, and data from https://www.thecocktaildb.com/api.php.
 
-* Ruby version
+# Installation
+Clone this repo to your local computer
+Get to the directory `fun-drink-recipes (master)`
+In your terminal: 
+Run `bundle install`
+Run `rails db:create RAILS_ENV=test`
+Run `rails db:seed`
 
-* System dependencies
+# Usage
+Run `rails s` to start the server
+Open your browser to localhost
 
-* Configuration
+# Contributing
+Bug reports and pull requests are welcome on GitHub at https://github.com/lena0128/fun-drinks. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct].
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# License
+The app is available as open source under the terms of the MIT License.
