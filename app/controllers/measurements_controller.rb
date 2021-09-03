@@ -17,9 +17,6 @@ class MeasurementsController < ApplicationController
         end
     end
 
-    def show
-        @measurement = Measurement.find_by(id: params[:id])
-    end
 
     def create
         @measurement = Measurement.new(measurement_params)

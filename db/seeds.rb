@@ -255,6 +255,15 @@ rm_2_array.each do |drink|
     )
 end
 
+Drink.create([
+    {drink_name: "Limeade", 
+    category: "Punch / Party Drink", 
+    alcoholic: "Non Alcoholic", 
+    drink_thumb: "https://www.thecocktaildb.com/images/media/drink/5jdp5r1487603680.jpg", 
+    drink_recipe: "In a large glass, put the lime juice and sugar, and stir well. Add cold seltzer water to fill. Put the lime peels in the glass. Drink. Repeat until limes or soda run out.",
+    user_id: 2
+    }])
+
 Measurement.create([
     {measure: "1 1/2 oz ", drink_id: 1, ingredient_id: 4},
     {measure: "1/2 oz ", drink_id: 1, ingredient_id: 8},
@@ -299,6 +308,29 @@ Measurement.create([
     {measure: "3 cups ", drink_id: 11, ingredient_id: 29},
     {measure: "1 cup ", drink_id: 11, ingredient_id: 6},
     {measure: "1/2 cup ", drink_id: 11, ingredient_id: 30},
-    {measure: "4 tablespoons ", drink_id: 11, ingredient_id: 31}
+    {measure: "4 tablespoons ", drink_id: 11, ingredient_id: 31},
+    {measure: "Juice of 1 ", drink_id: 12, ingredient_id: 9},
+    {measure: "1 tblsp ", drink_id: 12, ingredient_id: 23}
 ])
 
+
+Review.create([
+    {
+        rating: "⭐⭐⭐⭐⭐",
+        content: "As someone who is lactose intolerant and loves milk I had to find an alternative. This milk is a great substitute. I get to enjoy all the things I love with milk without the consequences of dairy.",
+        ingredient_id: 6,
+        user_id: 1
+},
+{
+        rating: "⭐⭐⭐⭐⭐",
+        content: "I am lactose intolerant so I turn to lactaid for my milk. I tried plant based milk but I was missing the actual milk flavor. Lactose free milk tastes sweeter than its regular counterpart, but that I the only difference. I find that when I use it for my coffee I can do away with sweeteners which is a plus. I also use it for cooking and baking and it works just the same.",
+        ingredient_id: 6,
+        user_id: 1
+},
+{
+        rating: "⭐⭐⭐",
+        content: "For years I have using this milk, but it was so unfortunate that this milk is no causing heartburn, and I hope you find a solution to it. Moreover, I have stopped buying the product due to a dilemma.",
+        ingredient_id: 6,
+        user_id: 2
+}
+])

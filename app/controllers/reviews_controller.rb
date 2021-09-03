@@ -39,6 +39,8 @@ class ReviewsController < ApplicationController
     def show
         if params[:ingredient_id]
           @ingredient = Ingredient.find_by(id: params[:ingredient_id])
+          @user = current_user
+          @review = @ingredient.reviews.find_by(id: params[:id])
         else
             @review = Review.find_by(id: params[:id])
         end

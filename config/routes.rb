@@ -9,7 +9,7 @@ Rails.application.routes.draw do
       
   
   resources :drinks do
-    resources :measurements, only: [:new, :create, :index]
+    resources :measurements, only: [:new, :create]
   end
 
   resources :reviews, only: [:show, :destroy]

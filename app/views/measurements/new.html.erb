@@ -5,7 +5,7 @@
 <%= render partial: "application/errors", locals: {errors: @measurement.errors.full_messages } %>
 
 <div class="form">
-<%= form_for @measurement, url: form_url_helper(@drink) do |f| %>
+<%= form_for(@measurement, url: drink_measurements_path(@drink)) do |f| %>
     <% if !@drink %>
       <%= f.label "Select an drink" %>
       <%= f.collection_select :drink_id, Drink.all, :id, :drink_name, prompt: "Please select" %>
