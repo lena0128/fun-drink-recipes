@@ -6,14 +6,20 @@ The third-party provider registrations was created with Omniauth, CSS styling wi
 
 # Installation
 Clone this repo to your local computer
+
 Get to the directory `fun-drink-recipes (master)`
+
 In your terminal: 
+
 Run `bundle install`
+
 Run `rails db:create RAILS_ENV=test`
+
 Run `rails db:seed`
 
 # Usage
 Run `rails s` to start the server
+
 Open your browser to localhost
 
 # Contributing
