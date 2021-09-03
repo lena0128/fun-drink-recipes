@@ -1,13 +1,18 @@
 Rails.application.routes.draw do
   
-  resources :users, only: [:new, :create, :show]
+  
+  resources :users, only: [:new, :create, :show] 
 
-  resources :ingredients, only:[:index, :new, :create, :show]
+  resources :ingredients, only:[:index, :new, :create, :show] do
+    resources :reviews, only: [:new, :create, :show, :destroy]
+  end
+      
   
   resources :drinks do
     resources :measurements, only: [:new, :create, :index]
   end
 
+  resources :reviews, only: [:new, :create, :show, :destroy]
   
   get '/signup', to: "users#new", as: "signup"
   post '/signup', to: "users#create"

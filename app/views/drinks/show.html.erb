@@ -4,6 +4,8 @@
 
 <h3><%= @drink.drink_name %></h3>
 <div style="text-align: center;">
+<small><i>Created by: <%= link_to @drink.user.username, user_path(@drink.user.id) %></i></small>
+<br>
 <small><i>Last updated on: <%= @drink.updated_at.strftime("%B %d, %Y") %></i></small>
 <img src="<%= @drink.drink_thumb %>" alt="drink image" width="40%">
 <br>

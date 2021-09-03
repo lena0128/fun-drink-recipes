@@ -1,0 +1,12 @@
+<div class="container">
+
+<p id="flash"><%= flash[:message] %></p>
+
+  <small><b><%= @review.user.username %></b></small> 
+  <br>
+  <%= @review.rating %> 
+  <br>
+  <%= @review.content %>
+  <br>
+  <p><small>Reviewed on: <%= @review.updated_at.strftime("%B %d, %Y") %></small></p>
+</div>

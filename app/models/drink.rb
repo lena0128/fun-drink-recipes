@@ -1,6 +1,8 @@
 class Drink < ApplicationRecord
+    belongs_to :user
     has_many :measurements
     has_many :ingredients, through: :measurements
+    
 
     before_validation :make_title_case, :set_defalut_thumb
     validates :drink_name, presence: true, uniqueness: true

@@ -18,4 +18,6 @@
    
 <%= render partial: "drinks/drinks", locals: {drinks: @ingredient.drinks} %>
 
+<%= link_to "Add a Review", new_ingredient_review_path(@ingredient) %>
+
 </div>

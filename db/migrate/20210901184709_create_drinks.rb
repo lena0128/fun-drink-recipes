@@ -6,6 +6,7 @@ class CreateDrinks < ActiveRecord::Migration[6.1]
       t.string :alcoholic
       t.string :drink_thumb
       t.string :drink_recipe
+      t.integer :user_id
       t.timestamps
     end
   end

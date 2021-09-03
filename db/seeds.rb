@@ -8,6 +8,11 @@
 
 require 'rest-client'
 
+User.create([
+    {username: "Joyce13", email:"joyce13@email.com", password: "password13"}, 
+    {username: "Lena14", email:"lena14@email.com", password: "password14"}
+])
+
 Ingredient.create([
     {name: "Rum",
     image: "https://www.thecocktaildb.com/images/ingredients/Rum.png", 
@@ -231,7 +236,8 @@ rm_1_array.each do |drink|
     category: drink["strCategory"],
     alcoholic: drink["strAlcoholic"],
     drink_thumb: drink["strDrinkThumb"],
-    drink_recipe: drink["strInstructions"]
+    drink_recipe: drink["strInstructions"],
+    user_id: 2
     )
 end
 
@@ -244,7 +250,8 @@ rm_2_array.each do |drink|
     category: drink["strCategory"],
     alcoholic: drink["strAlcoholic"],
     drink_thumb: drink["strDrinkThumb"],
-    drink_recipe: drink["strInstructions"]
+    drink_recipe: drink["strInstructions"],
+    user_id: 1
     )
 end
 
@@ -295,4 +302,3 @@ Measurement.create([
     {measure: "4 tablespoons ", drink_id: 11, ingredient_id: 31}
 ])
 
-User.create([{username: "Joyce13", email:"joyce13@email.com"}, password_digest: "password13"])

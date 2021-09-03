@@ -1,0 +1,16 @@
+<div class="container">
+<h3>Add a Review</h3>
+
+<%= render partial: "application/errors", locals: { errors: @review.errors.full_messages } %>
+  <div class="form">
+    <%= form_for @review do |f| %>
+      <%= f.label :rating %>
+      <%= f.select :rating, ["⭐⭐⭐⭐⭐", "⭐⭐⭐⭐", "⭐⭐⭐", "⭐⭐", "⭐"], prompt: "please select" %>
+      <br>
+      <%= f.label "Review (optional)" %>
+      <%= f.text_field :content, class:"form-control" %>
+      <br>
+      <%= f.submit %>
+    <%end%>
+  </div>  
+</div>

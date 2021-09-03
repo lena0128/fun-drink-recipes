@@ -1,16 +1,21 @@
 <div class="container">
-<h3>View Drinks</h3>
 
-<%= form_with(url: drinks_path, method: :get) do |f| %>
+  <h3>View Drinks</h3>
+
+  <p id="flash"><%= flash[:message] %></p>
+
+  <%= form_with(url: drinks_path, method: :get) do |f| %>
     <%= f.text_field :name %>
     <%= f.submit "Search Drink" %>
-<%end%>
-<p>
-<%= form_with(url: drinks_path, method: :get) do |f| %>
+  <%end%>
+  <p>
+    <%= form_with(url: drinks_path, method: :get) do |f| %>
     <%= f.select :filter, ["Ordinary Drink", "Cocktail", "Milk / Float / Shake", "Cocoa", "Shot", "Coffee / Tea", "Homemade Liqueur", "Punch / Party Drink", "Beer", "Soft Drink / Soda", "View All"], prompt: "please select" %>
     <%= f.submit "Filter by Category" %>
-<%end%>
-</p>
-<%= render partial: "drinks", locals: {drinks: @drinks} %>
-</div>
+  <%end%>
+  </p>
+
+  <%= render partial: "drinks", locals: {drinks: @drinks} %>
+
+  </div>
 

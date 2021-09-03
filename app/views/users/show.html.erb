@@ -1,6 +1,19 @@
 <div class="container">
+
   <h3>Welcome, <%= @user.username %></h3>
 
   <p id="flash"><%= flash[:message] %></p>
+
+  <h3>Your Drinks</h3>
+  <div>
+   <% @user.drinks.each do |d| %>
+    <% if d.user_id == current_user.id %>
+    <li class="list-group-item list-group-item-info">
+    <img src="<%= d.drink_thumb %>" class="rounded float-right" width="35px" style="float:right;">
+     <b class="badge badge-pill badge-info">Drink</b> - <%= link_to d.drink_name, drink_path(d) %>
+    </li><br>
+    <%end%> 
+   <%end%>
+  </div>  
   
 </div>
