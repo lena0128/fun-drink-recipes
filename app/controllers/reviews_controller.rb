@@ -2,7 +2,12 @@ class ReviewsController < ApplicationController
     before_action :require_login
 
     def index
+        if params[:ingredient_id]
+            @ingredient = Ingredient.find_by(id: params[:ingredient_id])
+            @reviews = @ingredient.reviews
+        else
         @reviews = Review.all
+        end
     end
 
     def new

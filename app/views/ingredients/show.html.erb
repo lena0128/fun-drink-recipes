@@ -12,9 +12,10 @@
   <%= render partial: "drinks/drinks", locals: {drinks: @ingredient.drinks} %>
 
 
-  <h5>User Review</h5>
+  <h5>Latest User Review</h5>
   <%= render partial: "reviews/reviews", locals: { reviews: @ingredient.reviews } %>
-  <%= link_to "Add a Review", new_ingredient_review_path(@ingredient), class: "btn btn-info btn-lg" %>
+  <button type="button", class="btn btn-info btn-sm"><%= link_to "Add a Review", new_ingredient_review_path(@ingredient), class: "btn btn-info btn-sm" %></button>
+  <button type="button", class="btn btn-info btn-sm"><%= link_to "All Reviews", ingredient_reviews_path(@ingredient), class: "btn btn-info btn-sm" %></button>
   <br><br>
   </div>
 

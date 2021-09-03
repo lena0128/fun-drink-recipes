@@ -1,3 +1,13 @@
 <div class="container">
+
+<% if @ingredient %>
+<h3>All Reviews on <%= @ingredient.name %></h3>
+<%= render partial: "reviews/reviews", locals: {reviews: @ingredient.reviews } %>
+
+<%else%>
 <h3>All Reviews</h3>
+<%= render partial: "reviews", locals: {reviews: @reviews} %>
+
+<%end%>
+
 </div>
