@@ -13,7 +13,7 @@ In your terminal:
 
 Run `bundle install`
 
-Run `rails db:create RAILS_ENV=test`
+Run `rails db:migrate`
 
 Run `rails db:seed`
 
