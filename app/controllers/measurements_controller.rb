@@ -39,8 +39,7 @@ class MeasurementsController < ApplicationController
         params.require(:measurement).permit(
             :measure,
             :drink_id,
-            :ingredient_id, 
-            ingredient_attributes: [:name]
+            :ingredient_id
         )
     end
 
