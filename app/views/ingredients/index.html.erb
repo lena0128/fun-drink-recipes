@@ -8,12 +8,6 @@
     <%= f.submit "Search" %>
 <%end%>
 <br>
-<%= form_tag(ingredients_path, method: :get) do %>
-    <%= label_tag "Filter Ingredients" %>
-    <%= select_tag :filter, options_for_select([ ['Alcohol'], ['Non-Alcohol'], ['View All'] ]), prompt: "Please select" %>
-    <input type="submit" value="Filter"><br>
-<%end%>    
-<br>
 <%= render partial: "ingredients", locals: { ingredients: @ingredients } %>
 
 </div>

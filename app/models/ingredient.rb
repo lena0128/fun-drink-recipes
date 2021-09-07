@@ -10,9 +10,11 @@ class Ingredient < ApplicationRecord
     validate :is_title_case
 
     scope :ingredient_search, ->(name) { where("name LIKE ?", "%#{name.titlecase}%") }
-    scope :filter_alcohol, -> { where(alcohol: "yes") }
-    scope :filter_non_alcohol, -> { where(alcohol: "no") }
+    scope :filter_by_alcohol, ->(filter) { where("alcohol = ?", filter) }
 
+    def self.order_by_name
+        self.order(:name)
+    end  
 
     def set_defalut_image
         if self.image == nil || self.image == ""

@@ -5,11 +5,11 @@ class DrinksController < ApplicationController
 
     def index
         if params[:name]
-            @drinks = Drink.drink_search(params[:name])
+            @drinks = Drink.drink_search(params[:name]).order_by_name
         elsif params[:filter]
             @drinks = Drink.filter_by_category(params[:filter])
         else
-            @drinks = Drink.all
+            @drinks = Drink.all.order_by_name
         end
     end
 

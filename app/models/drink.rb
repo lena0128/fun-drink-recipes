@@ -6,17 +6,22 @@ class Drink < ApplicationRecord
 
     before_validation :make_title_case, :set_defalut_thumb
     validates :drink_name, presence: true, uniqueness: true
-    validates_presence_of :category, :alcoholic, :drink_recipe
-
+    validates_presence_of :category, :alcoholic, :drink_recipe  
+    
     # search by drink name
     scope :drink_search, ->(name) { where( "drink_name LIKE ?", "%#{name.titlecase}%")}
     
     # filter by category
-    scope :filter_by_category, ->(filter) {where("category = ?", filter).order(:drink_name)}
+    scope :filter_by_category, ->(filter) {where("category = ?", filter)}
     
     # latest data displayed on hoempage
     scope :latest_alcohoic_drinks, -> { where(alcoholic: "Alcoholic").last(3)} 
     scope :latest_non_alcohoic_drinks, -> { where(alcoholic: "Non Alcoholic").last(3)} 
+
+    # order by name
+    def self.order_by_name
+         self.order(:drink_name)
+    end  
 
     def measurements_attributes=(measurements_attributes)
         measurements_attributes.values.each do |hash|

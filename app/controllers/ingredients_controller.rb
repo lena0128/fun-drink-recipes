@@ -5,19 +5,9 @@ class IngredientsController < ApplicationController
     def index
         # name seach function
         if params[:name]
-            @ingredients = Ingredient.ingredient_search(params[:name])
-        # filter by alcohol     
-        elsif params[:filter]
-            case params[:filter]
-              when "Alcohol"
-              @ingredients = Ingredient.filter_alcohol.sort_by { |ingredient| ingredient.name }
-              when "Non-Alcohol"
-              @ingredients = Ingredient.filter_non_alcohol.sort_by { |ingredient| ingredient.name }
-              when "All"
-                @ingredients = Ingredient.all.sort_by { |ingredient| ingredient.name }
-              end
+            @ingredients = Ingredient.ingredient_search(params[:name]).order_by_name
         else
-           @ingredients = Ingredient.all.sort_by { |ingredient| ingredient.name }
+            @ingredients = Ingredient.all.order_by_name
         end
     end
 
