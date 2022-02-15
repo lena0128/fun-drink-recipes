@@ -1,10 +1,10 @@
-# Fun Drink Recipes App
+# 🍹Fun Drink Recipes App
 
 <img src="./public/fun-drink-recipes-github-thumbnail.jpg" alt="banner image" />
 
 ### Drink recipe search resource and CRUD application equipped with search and filtering tools that optimize access to ingredients and categories.
 
-The Fun Drink Recipe App is built with the Ruby on Rails framework. This web application is for drink lovers to find and create ingredients and recipes from cocktails to milkshakes. Users can also comment and rating on any ingredient. The app also provides name search and filter functionality. Enjoy!
+The Fun Drink Recipe App is built with the Ruby on Rails framework. This web application is for drink lovers to find and create ingredients and recipes from cocktails to milkshakes. Users can also comment and rating on any ingredient. The app also provides name search and filter functionality. Enjoy🍷😊!
 
 The third-party provider registrations was created with Omniauth, CSS styling with Bootstrap, and data from https://www.thecocktaildb.com/api.php.
 
